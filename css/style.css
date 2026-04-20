@@ -46,7 +46,11 @@ h1 { position: absolute;
       font-size: 15vw;
 
     }
+header img {
+    margin: 100%;
+    display: block;
 
+}
 }
 img {
     width: 100%;
@@ -75,9 +79,48 @@ ul {
     a {
         color:inherit;
         text-decoration:none;
-        font-size:1,8rem;
+        font: size 1.5em;
     }
     }
     
   }
+}
+section > div {
+     margin:0 auto;
+    width: var(--breakpoint_principal);
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+.textos_fotos {
+     padding-left: 3rem;
+     width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.texto_derecha {
+    text-align: right;
+    padding-left: 3rem;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+.texto_izquierda {
+    text-align: left;
+
+}
+.fondo color {
+    background-color:var(--color_fondo_primario);
 }
