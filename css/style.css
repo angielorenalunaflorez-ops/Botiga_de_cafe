@@ -36,12 +36,12 @@ h1,h2 {
 }
 
 h1 { position: absolute;
-    color: white;
+    color:var(--color_texto_primario);
     top: 10vw;
     right: 6vw;
     font-size: 12vw;
     @media (max-width: 450px) {
-       color: white;
+       /* color: white; */
       right: 27vw;
       font-size: 15vw;
 
@@ -52,9 +52,9 @@ header img {
 
 }
 }
-img {
+/* img {
     width: 100%;
-}
+} */
 
 nav {
     background-color: var(--color_fondo_primario);
@@ -63,17 +63,19 @@ ul {
     width: var(--breakpoint_principal);
     display:flex;
     justify-content: space-between;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
    
     li {
     list-style:none;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border-top:5px solid transparent ;
         border-bottom:5px solid transparent ;
         color: var(--color_texto_primario);
-    &:hover{
-        border-top:5px solid yellow ;
-        border-bottom:5px solid yellow ;
+    &:hover {
+        border-top:5px solid var(--color_texto_primario) ;
+        border-bottom:5px solid var(--color_texto_primario) ;
+        border-top: 5px solid yellow;
+        border-bottom: 5px solid yellow;
         color: yellow;
     }
     a {
@@ -90,22 +92,18 @@ section > div {
     width: var(--breakpoint_principal);
     display:flex;
     justify-content: space-between;
-    width: 100%;
+    /* width: 100%; */
+    gap: 2rem;
     img {
-        width: 100%;
+        width: 50%;
+    }
+    video {
+        width: 50%;
     }
 }
 .textos_fotos {
-     padding-left: 3rem;
+     /* padding-left: 3rem; */
      width: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.texto_derecha {
-    text-align: right;
-    padding-left: 3rem;
-    width: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -114,13 +112,38 @@ section > div {
         margin-bottom: 1rem;
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
+}
+.texto_derecha {
+    text-align: right;
+    padding-left: 3rem;
+    
 }
 .texto_izquierda {
     text-align: left;
-
+    color: var(--color_texto_primario);
+    padding-right: 2rem;
 }
-.fondo color {
-    background-color:var(--color_fondo_primario);
+.fondo_color {
+    background-color: var(--color_fondo_primario);
+}
+.section_opiniones {
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+.section_opiniones > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  cite {
+    color: red;
+    font-style: italic;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
 }
